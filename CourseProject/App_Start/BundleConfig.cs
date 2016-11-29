@@ -21,9 +21,12 @@ namespace CourseProject
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/jqBootstrapValidation.js",
+                      "~/Scripts/clean-blog.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/clean-blog.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
