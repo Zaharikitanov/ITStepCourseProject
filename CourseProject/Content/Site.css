@@ -1,1 +1,7 @@
-﻿
+﻿.navbar-default.navbar-custom {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-default.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
