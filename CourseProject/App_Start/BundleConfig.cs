@@ -29,6 +29,9 @@ namespace CourseProject
                       "~/Content/clean-blog.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/admin").Include(
+                      "~/Content/bootstrap.css",
+                      "~/Content/admin.css"));
         }
     }
 }

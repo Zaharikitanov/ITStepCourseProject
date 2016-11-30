@@ -199,6 +199,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\PostsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="ViewModels\PostViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\clean-blog.css" />
@@ -229,6 +232,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Administration\Views\Post\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Posts\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Posts\Delete.cshtml" />
+    <Content Include="Areas\Administration\Views\Posts\Details.cshtml" />
+    <Content Include="Areas\Administration\Views\Posts\Edit.cshtml" />
+    <Content Include="Areas\Administration\Views\Posts\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\clean-blog.js" />
     <Content Include="Scripts\jqBootstrapValidation.js" />
@@ -280,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Models\" />
     <Folder Include="Images\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
