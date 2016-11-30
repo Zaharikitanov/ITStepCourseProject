@@ -1,0 +1,7 @@
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\bin\Debug\CourseProject.Common.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\bin\Debug\CourseProject.Common.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\bin\Debug\AutoMapper.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\bin\Debug\AutoMapper.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\obj\Debug\CourseProject.Common.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\obj\Debug\CourseProject.Common.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Common\obj\Debug\CourseProject.Common.pdb

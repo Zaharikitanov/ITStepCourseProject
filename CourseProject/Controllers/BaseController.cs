@@ -1,6 +1,8 @@
 ﻿
 namespace CourseProject.Controllers
 {
+    using AutoMapper;
+    using Common.Mapping;
     using CourseProject.Data;
     using System;
     using System.Collections.Generic;
@@ -19,5 +21,13 @@ namespace CourseProject.Controllers
             this.Data = data;
         }
         protected ICourseProjectData Data { get; private set; }
+
+        protected IMapper Mapper
+        {
+            get
+            {
+                return AutoMapperConfig.Configuration.CreateMapper();
+            }
+        }
     }
 }
