@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using CourseProject.Data;
-
+﻿
 namespace CourseProject.Areas.Administration.Controllers
 {
-    public class PostsController : Controller
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Net;
+    using System.Web;
+    using System.Web.Mvc;
+    using CourseProject.Data;
+    using CourseProject.Controllers;
+    public class PostsController : BaseController
     {
         private CourseProjectDbContext db = new CourseProjectDbContext();
 
