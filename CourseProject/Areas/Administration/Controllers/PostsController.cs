@@ -31,7 +31,7 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = db.Posts.Find(id);
+            Post post = Data.Posts.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
@@ -42,7 +42,7 @@ namespace CourseProject.Areas.Administration.Controllers
         // GET: Administration/Posts/Create
         public ActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(db.Users, "Id", "Email");
+            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email");
             return View();
         }
 
@@ -55,12 +55,12 @@ namespace CourseProject.Areas.Administration.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Posts.Add(post);
-                db.SaveChanges();
+                Data.Posts.Add(post);
+                Data.Posts.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AuthorId = new SelectList(db.Users, "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -71,12 +71,12 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = db.Posts.Find(id);
+            Post post = Data.Posts.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AuthorId = new SelectList(db.Users, "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -89,11 +89,11 @@ namespace CourseProject.Areas.Administration.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(post).State = EntityState.Modified;
-                db.SaveChanges();
+                Data.Posts.Update(post);
+                Data.Posts.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AuthorId = new SelectList(db.Users, "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -104,7 +104,7 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = db.Posts.Find(id);
+            Post post = Data.Posts.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
@@ -117,19 +117,19 @@ namespace CourseProject.Areas.Administration.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Post post = db.Posts.Find(id);
-            db.Posts.Remove(post);
-            db.SaveChanges();
+            Post post = Data.Posts.Find(id);
+            Data.Posts.Delete(post);
+            Data.Posts.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    if (disposing)
+        //    {
+        //        db.Dispose();
+        //    }
+        //    base.Dispose(disposing);
+        //}
     }
 }
