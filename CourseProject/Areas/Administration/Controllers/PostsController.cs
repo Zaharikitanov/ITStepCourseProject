@@ -52,11 +52,13 @@ namespace CourseProject.Areas.Administration.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Content,AuthorId,CreatedOn,IsDeleted")] Post post)
+        public ActionResult Create(PostViewModel post)
         {
             if (ModelState.IsValid)
             {
-                Data.Posts.Add(post);
+                var dbPost = Mapper.Map<Post>(post);
+                dbPost.CreatedOn = DateTime.Now;
+                Data.Posts.Add(dbPost);
                 Data.Posts.SaveChanges();
                 return RedirectToAction("Index");
             }
