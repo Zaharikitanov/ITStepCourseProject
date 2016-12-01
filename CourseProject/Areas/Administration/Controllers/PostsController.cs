@@ -42,8 +42,9 @@ namespace CourseProject.Areas.Administration.Controllers
         // GET: Administration/Posts/Create
         public ActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email");
-            return View();
+            PostViewModel postVM = new PostViewModel();
+            postVM.Users = new SelectList(Data.Users.All(), "Id", "Email");
+            return View(postVM);
         }
 
         // POST: Administration/Posts/Create
