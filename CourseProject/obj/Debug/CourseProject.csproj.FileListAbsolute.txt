@@ -174,3 +174,10 @@ C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProj
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\CourseProject.Common.dll
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\CourseProject.Common.pdb
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\AutoMapper.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Common.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Mvc.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\WebActivatorEx.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Common.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Mvc.xml
