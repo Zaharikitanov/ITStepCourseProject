@@ -14,17 +14,6 @@ namespace CourseProject.Controllers
         {
             var posts = Mapper.Map<List<Post>,
                 List<PostViewModel>>(Data.Posts.All().ToList());
-            //var posts = this.Data.Posts
-            //    .All()
-            //    .ProjectTo<PostViewModel>()
-            //    //.Select(p => new PostViewModel()
-            //    //{
-            //    //    Author = p.Author.UserName,
-            //    //    Content = p.Content,
-            //    //    Title = p.Title,
-            //    //    CreatedOn = DateTime.Now
-            //    //})
-            //    .ToList();
             return View(posts);
         }
 

@@ -1,9 +1,5 @@
 ﻿@model IEnumerable<PostViewModel>
 
-@{
-    ViewBag.Title = "Index";
-}
-
 <h2>Index</h2>
 
 <p>
@@ -29,7 +25,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @*@Html.DisplayFor(modelItem => item.Author.Email)*@
+            @Html.DisplayFor(modelItem => item.Author.UserName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Title)

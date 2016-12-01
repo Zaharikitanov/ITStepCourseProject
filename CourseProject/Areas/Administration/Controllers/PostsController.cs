@@ -11,6 +11,7 @@ namespace CourseProject.Areas.Administration.Controllers
     using System.Web.Mvc;
     using CourseProject.Data;
     using CourseProject.Controllers;
+    using CourseProject.Areas.Administration.ViewModels;
     public class PostsController : BaseController
     {
         private CourseProjectDbContext db = new CourseProjectDbContext();
@@ -18,8 +19,9 @@ namespace CourseProject.Areas.Administration.Controllers
         // GET: Administration/Posts
         public ActionResult Index()
         {
-            var posts = db.Posts.Include(p => p.Author);
-            return View(posts.ToList());
+            var posts = Mapper.Map<List<Post>,
+                List<PostViewModel>>(Data.Posts.All().ToList());
+            return View(posts);
         }
 
         // GET: Administration/Posts/Details/5
