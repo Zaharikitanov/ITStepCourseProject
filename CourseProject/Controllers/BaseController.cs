@@ -11,17 +11,6 @@ namespace CourseProject.Controllers
     using System.Web.Mvc;
     public abstract class BaseController : Controller
     {
-        public BaseController()
-            :this(new CourseProjectData())
-        {
-
-        }
-        public BaseController(ICourseProjectData data)
-        {
-            this.Data = data;
-        }
-        protected ICourseProjectData Data { get; private set; }
-
         protected IMapper Mapper
         {
             get

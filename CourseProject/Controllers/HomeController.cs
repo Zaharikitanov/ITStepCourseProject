@@ -10,17 +10,18 @@ namespace CourseProject.Controllers
     using AutoMapper.QueryableExtensions;
     using static App_Start.NinjectWebCommon;
     using Data;
+    using CourseProjectServices.Contracts;
     public class HomeController : BaseController
     {
-        public HomeController(ICourseProjectData data)
-            :base(data)
+        private IPostService postsService;
+        public HomeController(IPostService service)
         {
-
+            this.postsService = service;
         }
         public ActionResult Index()
         {
             var posts = Mapper.Map<List<Post>,
-                List<PostViewModel>>(Data.Posts.All().ToList());
+                List<PostViewModel>>(postsService.GetAll().ToList());
             return View(posts);
         }
 

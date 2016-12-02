@@ -37,7 +37,7 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = Data.Posts.Find(id);
+            Post post = postsService.Find(id);
             if (post == null)
             {
                 return HttpNotFound();

@@ -19,7 +19,12 @@ namespace CourseProjectServices
 
         public IQueryable<Post> GetAll()
         {
-            throw new NotImplementedException();
+            this.Data.Posts.All();
+        }
+
+        public Post Find(int id)
+        {
+            return this.Data.Posts.Find(id);
         }
     }
 }

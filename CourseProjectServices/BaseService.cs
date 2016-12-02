@@ -9,6 +9,10 @@ namespace CourseProjectServices
     using System.Threading.Tasks;
     public class BaseService
     {
+        public BaseService(ICourseProjectData data)
+        {
+            this.Data = data;
+        }
         protected ICourseProjectData Data { get; private set; }
     }
 }

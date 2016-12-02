@@ -1,6 +1,7 @@
 ﻿
 namespace CourseProjectServices.Contracts
 {
+    using CourseProject.Models;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -8,6 +9,6 @@ namespace CourseProjectServices.Contracts
     using System.Threading.Tasks;
     public interface IUsersService
     {
-
+        IQueryable<ApplicationUser> GetAll();
     }
 }
