@@ -12,20 +12,21 @@ namespace CourseProject.Areas.Administration.Controllers
     using CourseProject.Data;
     using CourseProject.Controllers;
     using CourseProject.Areas.Administration.ViewModels;
+    using CourseProjectServices.Contracts;
     public class PostsController : BaseController
     {
         private CourseProjectDbContext db = new CourseProjectDbContext();
 
-        public PostsController(ICourseProjectData data)
-            :base(data)
+        private IPostService postsService;
+        public PostsController(IPostService service)
         {
-
+            this.postsService = service;
         }
         // GET: Administration/Posts
         public ActionResult Index()
         {
             var posts = Mapper.Map<List<Post>,
-                List<PostViewModel>>(Data.Posts.All().ToList());
+                List<PostViewModel>>(postsService.GetAll().ToList());
             return View(posts);
         }
 
