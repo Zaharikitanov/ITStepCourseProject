@@ -16,6 +16,11 @@ namespace CourseProject.Areas.Administration.Controllers
     {
         private CourseProjectDbContext db = new CourseProjectDbContext();
 
+        public PostsController(ICourseProjectData data)
+            :base(data)
+        {
+
+        }
         // GET: Administration/Posts
         public ActionResult Index()
         {
