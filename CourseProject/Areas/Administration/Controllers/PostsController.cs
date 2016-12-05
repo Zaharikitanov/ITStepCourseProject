@@ -32,21 +32,6 @@ namespace CourseProject.Areas.Administration.Controllers
             return View(posts);
         }
 
-        // GET: Administration/Posts/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Post post = postsService.Find(id);
-            if (post == null)
-            {
-                return HttpNotFound();
-            }
-            return View(post);
-        }
-
         // GET: Administration/Posts/Create
         public ActionResult Create()
         {
@@ -65,9 +50,7 @@ namespace CourseProject.Areas.Administration.Controllers
             if (ModelState.IsValid)
             {
                 var dbPost = Mapper.Map<Post>(post);
-                dbPost.CreatedOn = DateTime.Now;
                 this.postsService.Add(dbPost);
-                this.postsService.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -87,8 +70,10 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.AuthorId = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
-            return View(post);
+
+            PostViewModel postVM = Mapper.Map<PostViewModel>(post);
+            postVM.Users = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
+            return View(postVM);
         }
 
         // POST: Administration/Posts/Edit/5
@@ -96,15 +81,15 @@ namespace CourseProject.Areas.Administration.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Content,AuthorId,CreatedOn,IsDeleted")] Post post)
+        public ActionResult Edit(PostViewModel post)
         {
             if (ModelState.IsValid)
             {
-                this.postsService.Update(post);
-                this.postsService.SaveChanges();
+                var dbPost = Mapper.Map<Post>(post);
+                this.postsService.Update(dbPost);
                 return RedirectToAction("Index");
             }
-            ViewBag.AuthorId = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
+            post.Users = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -129,7 +114,6 @@ namespace CourseProject.Areas.Administration.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             this.postsService.Delete(id);
-            this.postsService.SaveChanges();
             return RedirectToAction("Index");
         }
 

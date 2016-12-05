@@ -181,3 +181,5 @@ C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProj
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.xml
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Common.xml
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\Ninject.Web.Mvc.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\CourseProjectServices.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject\bin\CourseProjectServices.pdb

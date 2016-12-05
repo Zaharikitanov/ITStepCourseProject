@@ -1,1 +1,15 @@
 C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\obj\Debug\CourseProject.Services.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProjectServices.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProjectServices.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProject.Data.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProject.Models.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\EntityFramework.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProject.Data.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\CourseProject.Models.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\EntityFramework.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\obj\Debug\CourseProjectServices.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProjectServices\obj\Debug\CourseProjectServices.pdb

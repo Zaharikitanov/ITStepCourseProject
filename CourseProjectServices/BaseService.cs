@@ -20,34 +20,46 @@ namespace CourseProjectServices
         }
         protected ICourseProjectData Data { get; private set; }
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return this.repository.All();
         }
 
-        public T Find(object id)
+        public virtual T Find(object id)
         {
             return this.repository.Find(id);
         }
 
-        public void Add (T entity)
+        public virtual void Add (T entity)
         {
             this.repository.Add(entity);
         }
 
-        public void Update (T entity)
+        public virtual void Update (T entity)
         {
             this.repository.Update(entity);
+            this.repository.SaveChanges();
         }
 
-        public void SaveChanges (T entity)
+        public virtual void SaveChanges (T entity)
         {
             this.repository.SaveChanges();
         }
 
-        public void Delete (T entity)
+        public virtual void Delete (T entity)
         {
             this.repository.Delete(entity);
+            this.repository.SaveChanges();
+        }
+
+        public void Delete(object id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveChanges()
+        {
+            throw new NotImplementedException();
         }
     }
 }

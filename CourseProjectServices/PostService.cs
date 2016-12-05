@@ -16,5 +16,12 @@ namespace CourseProjectServices
         {
 
         }
+
+        public override void Add(Post entity)
+        {
+            entity.CreatedOn = DateTime.Now;
+            base.Add(entity);
+            base.SaveChanges();
+        }
     }
 }
