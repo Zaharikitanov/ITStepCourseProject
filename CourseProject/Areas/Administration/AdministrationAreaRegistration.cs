@@ -17,7 +17,7 @@ namespace CourseProject.Areas.Administration
             context.MapRoute(
                 "Administration_default",
                 "Administration/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Posts", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
