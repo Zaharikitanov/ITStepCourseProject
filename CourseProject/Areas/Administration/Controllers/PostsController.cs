@@ -45,6 +45,7 @@ namespace CourseProject.Areas.Administration.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create(PostViewModel post)
         {
             if (ModelState.IsValid)
@@ -58,6 +59,7 @@ namespace CourseProject.Areas.Administration.Controllers
             return View(post);
         }
 
+        [ValidateInput(false)]
         // GET: Administration/Posts/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -81,6 +83,7 @@ namespace CourseProject.Areas.Administration.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(PostViewModel post)
         {
             if (ModelState.IsValid)

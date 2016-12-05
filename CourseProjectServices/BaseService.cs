@@ -54,12 +54,13 @@ namespace CourseProjectServices
 
         public void Delete(object id)
         {
-            throw new NotImplementedException();
+            this.repository.Delete(id);
+            this.repository.SaveChanges();
         }
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            this.repository.SaveChanges();
         }
     }
 }
