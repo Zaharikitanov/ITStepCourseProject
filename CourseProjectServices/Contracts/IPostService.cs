@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseProjectServices.Contracts
 {
-    public interface IPostService
+    public interface IPostService : IService<Post>
     {
         IQueryable<Post> GetAll();
     }

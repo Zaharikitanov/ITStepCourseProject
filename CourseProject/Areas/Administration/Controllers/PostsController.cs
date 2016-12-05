@@ -18,9 +18,11 @@ namespace CourseProject.Areas.Administration.Controllers
         private CourseProjectDbContext db = new CourseProjectDbContext();
 
         private IPostService postsService;
-        public PostsController(IPostService service)
+        private IUsersService usersService;
+        public PostsController(IPostService postService, IUsersService userService)
         {
-            this.postsService = service;
+            this.postsService = postService;
+            this.usersService = userService;
         }
         // GET: Administration/Posts
         public ActionResult Index()
@@ -49,7 +51,7 @@ namespace CourseProject.Areas.Administration.Controllers
         public ActionResult Create()
         {
             PostViewModel postVM = new PostViewModel();
-            postVM.Users = new SelectList(Data.Users.All(), "Id", "Email");
+            postVM.Users = new SelectList(this.usersService.GetAll(), "Id", "Email");
             return View(postVM);
         }
 
@@ -64,12 +66,12 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 var dbPost = Mapper.Map<Post>(post);
                 dbPost.CreatedOn = DateTime.Now;
-                Data.Posts.Add(dbPost);
-                Data.Posts.SaveChanges();
+                this.postsService.Add(dbPost);
+                this.postsService.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(this.postsService.GetAll(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -80,12 +82,12 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = Data.Posts.Find(id);
+            Post post = this.postsService.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -98,11 +100,11 @@ namespace CourseProject.Areas.Administration.Controllers
         {
             if (ModelState.IsValid)
             {
-                Data.Posts.Update(post);
-                Data.Posts.SaveChanges();
+                this.postsService.Update(post);
+                this.postsService.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AuthorId = new SelectList(Data.Users.All(), "Id", "Email", post.AuthorId);
+            ViewBag.AuthorId = new SelectList(this.usersService.GetAll(), "Id", "Email", post.AuthorId);
             return View(post);
         }
 
@@ -113,7 +115,7 @@ namespace CourseProject.Areas.Administration.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Post post = Data.Posts.Find(id);
+            Post post = this.postsService.Find(id);
             if (post == null)
             {
                 return HttpNotFound();
@@ -126,9 +128,8 @@ namespace CourseProject.Areas.Administration.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Post post = Data.Posts.Find(id);
-            Data.Posts.Delete(post);
-            Data.Posts.SaveChanges();
+            this.postsService.Delete(id);
+            this.postsService.SaveChanges();
             return RedirectToAction("Index");
         }
 

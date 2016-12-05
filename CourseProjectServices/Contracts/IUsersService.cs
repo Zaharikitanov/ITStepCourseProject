@@ -7,7 +7,7 @@ namespace CourseProjectServices.Contracts
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
-    public interface IUsersService
+    public interface IUsersService : IService<ApplicationUser>
     {
         IQueryable<ApplicationUser> GetAll();
     }

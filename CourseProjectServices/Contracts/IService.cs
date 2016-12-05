@@ -1,0 +1,23 @@
+﻿
+namespace CourseProjectServices.Contracts
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    public interface IService<T>
+    {
+        IQueryable<T> GetAll();
+
+        T Find(object id);
+
+        void Update(T identity);
+
+        void Add(T identity);
+
+        void Delete(object id);
+
+        void SaveChanges();
+    }
+}
