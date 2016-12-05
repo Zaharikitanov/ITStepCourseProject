@@ -25,6 +25,10 @@ namespace CourseProject
                       "~/Scripts/clean-blog.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/admin").Include(
+                    "~/Scripts/tinymce/tinymce.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/clean-blog.css",
                       "~/Content/bootstrap.css",
