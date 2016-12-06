@@ -25,5 +25,11 @@ namespace CourseProject.Controllers
             return View(posts);
         }
 
+        public ActionResult Info(int id)
+        {
+            var post = Mapper.Map<PostViewModel>(this.postsService.Find(id));
+            return View(post);
+        }
+
     }
 }

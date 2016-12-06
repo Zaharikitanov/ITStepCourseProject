@@ -17,6 +17,11 @@ namespace CourseProjectServices
 
         }
 
+        public override IQueryable<Post> GetAll()
+        {
+            return base.GetAll().OrderByDescending(p => p.CreatedOn);
+        }
+
         public override void Add(Post entity)
         {
             entity.CreatedOn = DateTime.Now;
