@@ -11,17 +11,25 @@ namespace CourseProject.Controllers
     using static App_Start.NinjectWebCommon;
     using Data;
     using CourseProjectServices.Contracts;
+    using Common.Caching;
     public class HomeController : BaseController
     {
         private IPostService postsService;
-        public HomeController(IPostService service)
+        private ICacheService cache;
+        public HomeController(IPostService service, ICacheService cache)
         {
+            this.cache = cache;
             this.postsService = service;
         }
         public ActionResult Index()
         {
-            var posts = Mapper.Map<List<Post>,
-                List<PostViewModel>>(postsService.GetAll().ToList());
+            var dbPosts = this.cache.Get<ICollection<Post>>("allPosts", () =>
+            {
+                return postsService.GetAll().ToList();
+            }, 60 * 60
+            ); 
+            var posts = Mapper.Map<ICollection<Post>,
+                List<PostViewModel>>(dbPosts);
             return View(posts);
         }
 

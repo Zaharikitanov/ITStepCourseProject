@@ -13,6 +13,7 @@ namespace CourseProject.App_Start
     using Data;
     using CourseProjectServices.Contracts;
     using CourseProjectServices;
+    using Common.Caching;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -74,6 +75,10 @@ namespace CourseProject.App_Start
             kernel
                 .Bind<IUsersService>()
                 .To<UsersService>()
+                .InRequestScope();
+            kernel
+                .Bind<ICacheService>()
+                .To<HttpCacheService>()
                 .InRequestScope();
         }
     }
