@@ -28,6 +28,15 @@ namespace CourseProject.Controllers
         public ActionResult Info(int id)
         {
             var post = Mapper.Map<PostViewModel>(this.postsService.Find(id));
+            if (post.Content.Length > 30)
+            {
+                post.SubHeader = post.Content.Substring(0, 30);
+            }
+            else
+            {
+                post.SubHeader = post.Content;
+            }
+            
             return View(post);
         }
 
