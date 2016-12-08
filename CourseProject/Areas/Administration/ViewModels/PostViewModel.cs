@@ -27,7 +27,17 @@ namespace CourseProject.Areas.Administration.ViewModels
 
         public string ShortenedContent (string text)
         {
-            string shortenedText = Content.Substring(0, Math.Min(50, text.Length));
+            string shortenedText;
+            int MaxLength = 50;
+
+            if (text.Length >= MaxLength)
+            {
+                shortenedText = text.Substring(0, MaxLength) + "...";
+            }
+            else
+            {
+                shortenedText = text;
+            }
             return shortenedText;
         }
     }

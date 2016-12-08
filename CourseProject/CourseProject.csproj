@@ -258,6 +258,7 @@
     <Content Include="Areas\Administration\Views\Posts\Delete.cshtml" />
     <Content Include="Areas\Administration\Views\Posts\Edit.cshtml" />
     <Content Include="Areas\Administration\Views\Posts\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Postcategories.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\clean-blog.js" />
     <Content Include="Scripts\jqBootstrapValidation.js" />

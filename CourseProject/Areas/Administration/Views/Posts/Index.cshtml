@@ -24,8 +24,7 @@
         </td>
         <td>
             @{
-                string text = item.Content;
-                string shortText = item.ShortenedContent(text);
+                string shortText = item.ShortenedContent(item.Content);
             }
             @Html.DisplayFor(modelItem => shortText)
         </td>
