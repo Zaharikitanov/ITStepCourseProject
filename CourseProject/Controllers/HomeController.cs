@@ -26,7 +26,7 @@ namespace CourseProject.Controllers
             var dbPosts = this.cache.Get<ICollection<Post>>("allPosts", () =>
             {
                 return postsService.GetAll().ToList();
-            }, 60 * 60
+            }, 60
             ); 
             var posts = Mapper.Map<ICollection<Post>,
                 List<PostViewModel>>(dbPosts);

@@ -7,19 +7,11 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Author.UserName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Content)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedOn)
-        </th>
-        <th></th>
+        <th>Author</th>
+        <th>Post title</th>
+        <th>Short description</th>
+        <th>Date created</th>
+        <th>Actions</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -31,7 +23,11 @@
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Content)
+            @{
+                string text = item.Content;
+                string shortText = item.ShortenedContent(text);
+            }
+            @Html.DisplayFor(modelItem => shortText)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedOn)

@@ -24,5 +24,11 @@ namespace CourseProject.Areas.Administration.ViewModels
         [Required]
         public string AuthorId { get; set; }
         public SelectList Users { get; set; }
+
+        public string ShortenedContent (string text)
+        {
+            string shortenedText = Content.Substring(0, Math.Min(50, text.Length));
+            return shortenedText;
+        }
     }
 }
