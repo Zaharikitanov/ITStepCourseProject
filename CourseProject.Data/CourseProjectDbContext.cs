@@ -24,6 +24,12 @@
             set;
         }
 
+        //public IDbSet<Category> Categories
+        //{
+        //    get;
+        //    set;
+        //}
+
         public static CourseProjectDbContext Create()
         {
             return new CourseProjectDbContext();

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 public class Post : BaseModel
 {
-
     public string Title { get; set; }
 
     public string Content { get; set; }

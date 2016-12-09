@@ -80,6 +80,10 @@ namespace CourseProject.App_Start
                 .Bind<ICacheService>()
                 .To<HttpCacheService>()
                 .InRequestScope();
+            kernel
+                .Bind<ICategoryService>()
+                .To<CategoriesService>()
+                .InRequestScope();
         }
     }
 }

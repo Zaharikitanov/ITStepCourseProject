@@ -12,3 +12,17 @@ c:\users\pc\documents\visual studio 2015\Projects\CourseProject\CourseProject.Mo
 c:\users\pc\documents\visual studio 2015\Projects\CourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.csprojResolveAssemblyReference.cache
 c:\users\pc\documents\visual studio 2015\Projects\CourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.dll
 c:\users\pc\documents\visual studio 2015\Projects\CourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\CourseProject.Models.dll.config
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\CourseProject.Models.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\CourseProject.Models.pdb
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\EntityFramework.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\EntityFramework.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.csprojResolveAssemblyReference.cache
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.dll
+C:\Users\PC\Documents\Visual Studio 2015\Projects\CourseProject\ITStepCourseProject\CourseProject.Models\obj\Debug\CourseProject.Models.pdb

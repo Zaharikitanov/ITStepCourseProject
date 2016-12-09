@@ -7,7 +7,7 @@
                 <div class="post-heading">
                     <h1>@Model.Title</h1>
                     <h2 class="subheading">@Html.Raw(Model.SubHeader)</h2>
-                    <span class="meta">Posted by <a href="#">@Model.Author</a> on @Model.CreatedOn</span>
+                    <span class="meta">Posted by <a href="#">@Model.Author.UserName</a> on @Model.CreatedOn</span>
                 </div>
             </div>
         </div>
